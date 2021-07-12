@@ -22,11 +22,11 @@ const Home: NextPage<Props> = ({ routes }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Code Education - Imersão FullCycle 3.0</title>
+        <title>Imersão FullCycle 3.0</title>
       </Head>
 
       <main className={styles.main}>
-        <h1>Code Education - Imersão FullCycle 3.0 - Desafio 2</h1>
+        <h1>Imersão FullCycle 3.0 - Desafio 2</h1>
         <h3>Routes</h3>
         <table className={styles.table}>
           <thead>
