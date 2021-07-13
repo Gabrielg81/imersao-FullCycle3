@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reactjs-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reactjs
+  template:
+    metadata:
+      labels:
+        app: reactjs
+    spec:
+      containers:
+        - name: reactjs
+          image: gabrielg81/react-desafio2-fullcycle
+          volumeMounts:
+            - name: reactjs-volume
+              mountPath: /home/node/app/.env
+              subPath: .env
+          ports:
+            - containerPort: 3000
+
+      volumes:
+        - name: reactjs-volume
+          configMap:
+            name: reactjs-configmap
+            items:
+              - key: env
+                path: .env
