@@ -7,3 +7,5 @@ RUN  npm i -g  @nestjs/cli@7.6.0
 USER node
 
 WORKDIR /home/node/app
+
+CMD ["chmod", "+x", "/.docker/entrypoint.sh"]
